@@ -60,7 +60,7 @@ header .navbar ul li a:hover {
 
 /* Sections */
 .section {
-    margin-bottom: 40px;
+    margin-bottom: 0px;
 }
 
 /* Styliser la section de présentation */
@@ -158,7 +158,49 @@ header .navbar ul li a:hover {
     }
 }
 
+/* Conteneur pour le bouton et les icônes */
+.cta-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 20px; /* Espacement entre les éléments */
+    margin-left: 20px;
+}
+
+/* Style pour le bouton de téléchargement du CV */
+.download-btn {
+    background-color: black;
+    color: blueviolet; /* Texte bleu-violet */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+    border: 2px solid blueviolet; /* Bordure bleu-violet */
+    border-radius: 50px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: blueviolet; /* Couleur au survol */
+    color: white; /* Texte blanc au survol */
+    border-color: blueviolet; /* Bordure verte au survol */
+}
+
+/* Taille et couleur de l'icône */
+.cta-buttons i {
+    font-size: 30px; /* Taille de l'icône */
+    color: blueviolet; /* Couleur de l'icône */
+    transition: transform 0.3s ease;
+}
+
+.cta-buttons i:hover {
+    transform: scale(1.1); /* Agrandir l'icône au survol */
+}
+
 /* Key Metrics Section */
+section#metrics {
+    margin-top: 200px;
+}
 #metrics h2 {
     font-size: 36px;
     color: whitesmoke;
