@@ -17,6 +17,7 @@ nav {
 .nav-container {
     display: flex;
     justify-content: space-between; /* Espacement maximum entre logo et menu */
+    align-items: center;
     width: 100%; /* Prendre toute la largeur disponible */
 }
 
@@ -40,6 +41,7 @@ nav .hamburger div {
 /* Logo aligné à gauche */
 .logo {
     display: flex;
+    justify-content: left;
     align-items: left;
 }
 
