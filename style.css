@@ -15,6 +15,14 @@ nav {
     padding: 10px 20px;
 }
 
+/* Conteneur global pour le logo et le menu */
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Espacement maximum entre logo et menu */
+    width: 100%; /* Prendre toute la largeur disponible */
+    align-items: center; /* Aligner verticalement au centre */
+}
+
 nav .hamburger {
     display: flex;
     flex-direction: column;
@@ -25,13 +33,6 @@ nav .hamburger {
     margin-top: 10px;
 }
 
-/* Conteneur global pour le logo et le menu */
-.nav-container {
-    display: flex;
-    justify-content: space-between; /* Espacement entre logo et menu */
-    align-items: center; /* Aligner verticalement au centre */
-}
-
 nav .hamburger div {
     background-color: white;
     height: 4px;
@@ -39,12 +40,13 @@ nav .hamburger div {
     width: 25px;
 }
 
-/* Logo et texte alignés à gauche */
+/* Logo aligné à gauche */
 .nav-logo {
     display: flex;
     align-items: left;
 }
 
+/* Texte du logo */
 .logo-text {
     color: white;
     font-size: 1.5rem;
@@ -52,6 +54,7 @@ nav .hamburger div {
     letter-spacing: 1px;
 }
 
+/* Menu aligné à droite */
 nav .menu {
     display: flex;
     align-items: right;
