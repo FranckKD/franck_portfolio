@@ -41,7 +41,7 @@ nav .hamburger div {
 /* Logo aligné à gauche */
 .nav-logo {
     display: flex;
-    align-items: left;
+    align-items: center;
 }
 
 /* Texte du logo */
