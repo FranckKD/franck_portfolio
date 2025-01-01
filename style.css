@@ -10,6 +10,8 @@ body {
 nav {
     background-color: black;
     display: flex;
+    justify-content: space-between; /* Espacement maximum entre logo et menu */
+    align-items: center;
     padding: 10px 20px;
 }
 
