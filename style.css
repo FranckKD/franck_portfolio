@@ -43,6 +43,8 @@ nav.logo span{
 /* Menu aligné à droite */
 nav .menu {
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 nav .menu a {
