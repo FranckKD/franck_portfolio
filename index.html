@@ -3,95 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Franck Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
+    <!-- Header and Navigation -->
+    <header>
+        <div class="logo">FranckKD.</div>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
-        <div class="logo">
-            <span class="logo-text">FranckKD</span>
-        </div>
-        <div class="menu">
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#resume">Resume</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+    </header>
 
+    <!-- Main Content -->
     <div class="container">
-        <section id="home" class="section">
-            <div class="home-intro">
-                <h2>Welcome to My Professional Portfolio</h2>
-                <p>Explore my expertise in data analysis, statistics, and machine learning. Discover how I can help you leverage data for actionable insights.</p>
-            </div>
-            <div class="home-actions">
-                <a href="path/to/cv.pdf" download>Download CV</a>
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-            </div>
-        </section>
 
-        <section id="services" class="section">
-            <h2>Services</h2>
-            <div class="services-container">
-                <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3 class="service-title">Statistical Analysis</h3>
-                    <p class="service-description">Comprehensive data analysis using advanced statistical techniques to derive actionable insights.</p>
+        <!-- Presentation Section -->
+        <section id="presentation" class="section">
+            <div class="text-content">
+                <h1 class="title">Statistician / Data Analyst</h1>
+                <p class="hello">Hello, I'm</p>
+                <p class="name">Franck Djidji</p>
+                <p class="description">
+                    I excel at drawing insights from complex data .<br>
+                    Explore my portfolio to learn more about my work and skills.
+                </p>
+            </div>
+            <div class="photo-container">
+                <div class="rotating-border">
+                    <img src="assets/" alt="Franck Djidji" class="profile-photo">
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">📈</div>
-                    <h3 class="service-title">Data Visualization</h3>
-                    <p class="service-description">Creating dynamic and interactive visualizations to communicate data-driven stories effectively.</p>
+            </div>     
+            
+        </section>
+
+        <!-- Key Metrics Section -->
+        <section id="metrics" class="section">
+            <h2>Key Metrics</h2>
+            <div class="metrics-container">
+                <div class="metric">
+                    <h3>2+</h3>
+                    <p>Years of Experience</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🧠</div>
-                    <h3 class="service-title">Machine Learning Models</h3>
-                    <p class="service-description">Building predictive models tailored to your business needs to optimize decision-making processes.</p>
+                <div class="metric">
+                    <h3>8</h3>
+                    <p>Technologies Used</p>
+                </div>
+                <div class="metric">
+                    <h3>3</h3>
+                    <p>Projects Completed</p>
                 </div>
             </div>
         </section>
 
-        <section id="portfolio" class="section">
-            <h2>Portfolio</h2>
-            <div class="portfolio gallery">
-                <img src="portfolio1.jpg" alt="Project 1">
-                <img src="portfolio2.jpg" alt="Project 2">
-                <img src="portfolio3.jpg" alt="Project 3">
-            </div>
-        </section>
-
-        <section id="resume" class="section">
-            <h2>Resume</h2>
-            <p>Download my resume to learn more about my professional background and experiences.</p>
-            <a href="path/to/resume.pdf" download class="btn">Download Resume</a>
-        </section>
-
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <form action="" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
     </div>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
+        <p>&copy; 2025 Franck Portfolio. All Rights Reserved.</p>
     </footer>
 
-    <!-- Lien vers le fichier script.js -->
+    <!-- Link to JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
+
 

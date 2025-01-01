@@ -1,288 +1,192 @@
-/* Body and basic layout */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Audiowide', serif;
+    font-family: 'Audiowide', sans-serif;
     font-size: 36px;
     background-color: black;
     color: white;
 }
 
-/* Navigation menu */
-nav .navbar {
+header {
     display: flex;
-    justify-content: space-between; /* Espacement maximum entre logo et menu */
-    align-items: center;
-    padding: 10px 20px;
-}
-
-nav .hamburger {
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 25px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-nav .hamburger div {
-    background-color: white;
-    height: 4px;
-    margin: 5px;
-    width: 25px;
-}
-
-/* Logo aligné à gauche */
-nav.logo span{
-    display: flex;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-/* Menu aligné à droite */
-nav .menu {
-    display: flex;
-    justify-content: right;
     align-items: center;
+    padding: 14px;
 }
 
-nav .menu a {
-    color: white;
+header .logo {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+header .navbar {
+    margin-left: 600px;
+    margin-right: 200px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+header .navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .navbar ul li a {
     text-decoration: none;
-    margin: 20px;
-    font-size: 1.2rem;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-nav .menu a:hover {
+header .navbar ul li a:hover {
     color: blueviolet;
     text-decoration: underline;
 }
 
-/* Container for all sections */
+/* HOME PAGE */
 .container {
-    margin-top: 100px; /* Adjust for fixed nav */
+    width: 80%;
+    margin: 20px auto;
 }
 
-/* Section styling */
+/* Sections */
 .section {
-    padding: 40px 20px;
-    text-align: center;
+    margin-bottom: 40px;
 }
 
-.section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.section p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-}
-
-/* Home section */
-#home .home-intro p {
-    margin-bottom: 30px;
-}
-
-.home-actions a {
-    color: #333;
-    text-decoration: none;
-    background-color: #ff6f61;
-    padding: 12px 20px;
-    border-radius: 5px;
-    margin: 5px;
-    font-size: 1.1rem;
-}
-
-.home-actions a:hover {
-    background-color: #e55a50;
-}
-
-/* Services section */
-.services-container {
+/* Styliser la section de présentation */
+#presentation {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    color: #fff;
+    font-family: 'Audiowide', sans-serif;
+    gap: 20px;
 }
 
-.service-card {
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-    transition: transform 0.3s ease;
+/* Contenu textuel à gauche */
+.text-content {
+    flex: 1;
+    text-align: left;
 }
 
-.service-card:hover {
-    transform: translateY(-10px);
+/* Styliser le titre principal */
+.title {
+    font-size: 30px;
+    font-weight: lighter;
 }
 
-.service-icon {
-    font-size: 3rem;
-    margin-bottom: 10px;
+/* Styliser la salutation */
+.hello {
+    font-size: 50px;
+    font-weight: normal;
+    color: white;
 }
 
-.service-title {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+/* Nom stylisé */
+.name {
+    font-size: 50px;
+    font-weight: normal;
+    color: blueviolet;
 }
 
-.service-description {
-    font-size: 1rem;
-    color: #555;
+/* Description */
+.description {
+    font-size: 20px;
+    font-weight: lighter;
 }
 
-/* Portfolio section */
-#portfolio .gallery {
+
+/* Photo et bordure rotative */
+.photo-container {
+    flex: 1;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    align-items: center;
+    position: relative;
 }
 
-#portfolio .gallery img {
+/* Image fixe */
+.profile-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover; /* Adapte l'image au cadre circulaire */
+    z-index: 2; /* Place l'image au-dessus */
+}
+
+/* Conteneur de la bordure rotative */
+.rotating-border {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotating-border::before {
+    content: '';
+    position: absolute;
     width: 100%;
-    max-width: 300px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    border-radius: 50%;
+    border: 4px dashed transparent;
+    border-color: blueviolet;
+    animation: rotate-border 60s linear infinite;
 }
 
-/* Resume section */
-#resume .btn {
-    background-color: #ff6f61;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2rem;
+/* Animation de rotation */
+@keyframes rotate-border {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-#resume .btn:hover {
-    background-color: #e55a50;
+/* Key Metrics Section */
+#metrics h2 {
+    font-size: 36px;
+    color: whitesmoke;
+    margin-bottom: 20px;
 }
 
-/* Contact section */
-form input,
-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
+.metrics-container {
+    display: flex;
+    justify-content: space-around;
 }
 
-form button {
-    background-color: #ff6f61;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1rem;
+.metric {
+    text-align: center;
 }
 
-form button:hover {
-    background-color: #e55a50;
+.metric h3 {
+    font-size: 40px;
+    color: blueviolet;
+}
+
+.metric p {
+    font-size: 18px;
+    color: whitesmoke;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: black;
+    font-size: 10px;
     color: white;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav .menu {
-        flex-direction: column;
-        display: none;
-        width: 100%;
-        text-align: center;
-    }
-
-    nav .menu a {
-        margin: 10px 0;
-    }
-
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-card {
-        width: 80%;
-    }
-
-    .home-actions a {
-        margin: 5px 0;
-    }
-
-    #portfolio .gallery {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    .section h2 {
-        font-size: 1.5rem;
-    }
-
-    .service-title {
-        font-size: 1.2rem;
-    }
-
-    .service-description {
-        font-size: 0.9rem;
-    }
-
-    form button {
-        font-size: 1rem;
-    }
-}
-/* Ajout des styles pour le menu mobile et le hamburger */
-nav .menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-nav .menu.active {
-    display: block;
-}
-
-@media (max-width: 768px) {
-    nav .menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-        position: absolute;
-        top: 70px;
-        left: 0;
-    }
-
-    nav .menu a {
-        padding: 15px;
-        border-bottom: 1px solid #444;
-    }
-
-    nav .hamburger {
-        display: block;
-        cursor: pointer;
-    }
+    margin-top: 5px;
+    margin-bottom: 0px;
 }
