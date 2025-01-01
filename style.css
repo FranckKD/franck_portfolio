@@ -7,20 +7,11 @@ body {
 }
 
 /* Navigation menu */
-nav {
-    background-color: black;
+nav .navbar {
     display: flex;
     justify-content: space-between; /* Espacement maximum entre logo et menu */
     align-items: center;
     padding: 10px 20px;
-}
-
-/* Conteneur global pour le logo et le menu */
-.nav-container {
-    display: flex;
-    justify-content: space-between; /* Espacement maximum entre logo et menu */
-    align-items: center;
-    width: 100%; /* Prendre toute la largeur disponible */
 }
 
 nav .hamburger {
@@ -41,12 +32,8 @@ nav .hamburger div {
 }
 
 /* Logo aligné à gauche */
-.logo {
+nav.logo span{
     display: flex;
-}
-
-/* Texte du logo */
-.logo-text {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
