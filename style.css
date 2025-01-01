@@ -55,7 +55,7 @@ nav .hamburger div {
 nav .menu {
     display: flex;
     justify-content: right;
-    align-items: center;
+    align-items: right;
 }
 
 nav .menu a {
