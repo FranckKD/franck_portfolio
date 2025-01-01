@@ -9,7 +9,6 @@ body {
 /* Navigation menu */
 nav {
     background-color: black;
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,6 +28,13 @@ nav .hamburger {
     height: 25px;
     cursor: pointer;
     margin-top: 10px;
+}
+
+/* Conteneur global pour le logo et le menu */
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Espacement entre logo et menu */
+    align-items: center; /* Aligner verticalement au centre */
 }
 
 nav .hamburger div {
