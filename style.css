@@ -1,11 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 html {
     scroll-behavior: smooth;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/stock-1863880.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 body {
     font-family: 'Audiowide', sans-serif;
     font-size: 36px;
-    background-color: black;
     color: white;
 }
 
@@ -13,24 +25,22 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: black;
+    height: 80px;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
 }
 
 header .logo {
     font-size: 40px;
     font-weight: bold;
-    margin: 10px;
+    margin-left: 150px;
 }
 
 header .navbar {
-    margin-left: 600px;
-    margin-right: 200px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-right: 150px;
 }
 
 header .navbar ul {
@@ -55,11 +65,13 @@ header .navbar ul li a:hover {
 /* HOME PAGE */
 .container {
     width: 80%;
-    margin: 20px auto;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 /* Sections */
 .section {
+    margin-top: 0px;
     margin-bottom: 0px;
 }
 
@@ -68,7 +80,7 @@ header .navbar ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px 20px;
+    margin-top: 0px;
     color: #fff;
     font-family: 'Audiowide', sans-serif;
     gap: 20px;
@@ -114,6 +126,8 @@ header .navbar ul li a:hover {
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-right: -230px;
+    margin-top: 100px;
 }
 
 /* Image fixe */
@@ -142,11 +156,12 @@ header .navbar ul li a:hover {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 50%;
     border: 4px dashed transparent;
+    border-radius: 50%;
     border-color: blueviolet;
-    animation: rotate-border 60s linear infinite;
+    animation: rotate-border 240s linear infinite;
 }
+
 
 /* Animation de rotation */
 @keyframes rotate-border {
@@ -164,12 +179,11 @@ header .navbar ul li a:hover {
     align-items: center;
     justify-content: left;
     gap: 20px; /* Espacement entre les éléments */
-    margin-left: 20px;
+    margin-top: -50px;
 }
 
 /* Style pour le bouton de téléchargement du CV */
 .download-btn {
-    background-color: black;
     color: blueviolet; /* Texte bleu-violet */
     padding: 10px 20px;
     font-size: 16px;
@@ -199,10 +213,11 @@ header .navbar ul li a:hover {
 
 /* Key Metrics Section */
 section#metrics {
-    margin-top: 200px;
+    margin-top: 100px;
 }
 #metrics h2 {
     font-size: 36px;
+    font-weight: bold;
     color: whitesmoke;
     margin-bottom: 20px;
 }
@@ -230,9 +245,9 @@ section#metrics {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: black;
     font-size: 10px;
     color: white;
-    margin-top: 5px;
+    margin-top: 120px;
     margin-bottom: 0px;
+    height: 50px;
 }
