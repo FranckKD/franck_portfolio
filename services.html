@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - Franck Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="global_style.css">
+    <link rel="stylesheet" href="services_style.css">
 </head>
-<body>
+
+<body class="services">
     <header>
         <div class="logo">FranckKD.</div>
         <div class="navbar">
+            <div id="menu-toggle" class="menu-icon">
+                <i class="fa fa-bars"></i> <!-- Icône du menu hamburger -->
+            </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -21,30 +26,37 @@
         </div>
     </header>
 
-    <div class="container">
-        <!-- Contenu des services -->
-        <section id="services" class="section">
-            <h2>Services</h2>
-            <div class="services-container">
-                <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3>Statistical Analysis</h3>
-                    <p>Comprehensive data analysis using advanced statistical techniques.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📈</div>
-                    <h3>Data Visualization</h3>
-                    <p>Creating dynamic and interactive visualizations to communicate data-driven stories effectively.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🧠</div>
-                    <h3>Machine Learning Models</h3>
-                    <p>Building predictive models tailored to your business needs.</p>
+    <div class="service-container">
+        <div class="service-row">
+            <div class="service">
+                <h3>Nom du Service 1 <button class="toggle-btn">+</button></h3>
+                <div class="service-details">
+                    <p>Détails du service 1...</p>
                 </div>
             </div>
-        </section>
-    </div>
-
+            <div class="service">
+                <h3>Nom du Service 2 <button class="toggle-btn">+</button></h3>
+                <div class="service-details">
+                    <p>Détails du service 2...</p>
+                </div>
+            </div>
+        </div>
+        <div class="service-row">
+            <div class="service">
+                <h3>Nom du Service 3 <button class="toggle-btn">+</button></h3>
+                <div class="service-details">
+                    <p>Détails du service 3...</p>
+                </div>
+            </div>
+            <div class="service">
+                <h3>Nom du Service 4 <button class="toggle-btn">+</button></h3>
+                <div class="service-details">
+                    <p>Détails du service 4...</p>
+                </div>
+            </div>
+        </div>
+    </div>    
+    
     <footer>
         <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
     </footer>

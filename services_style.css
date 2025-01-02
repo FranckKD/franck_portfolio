@@ -1,0 +1,50 @@
+body.services .service-container {
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 200px auto;
+}
+
+body.services .service-row {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+body.services .service {
+    width: 45%;
+}
+
+body.services .service-details {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid blueviolet;
+}
+
+body.services h3 {
+    display: flex;
+    justify-content: space-between; /* Espacement entre le titre et le bouton */
+    align-items: center; /* Aligne le texte et le bouton verticalement */
+    margin: 0;
+    font-size: 18px; /* Taille du titre */
+}
+
+body.services button.toggle-btn {
+    color: blueviolet;
+    background-color: transparent;
+    border: 1px solid blueviolet;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 16px;
+    height: 100%;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+body.services button.toggle-btn:hover {
+    background-color: blueviolet;
+    color: white;
+    transform: rotate(90deg);
+}

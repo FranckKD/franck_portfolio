@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 36px;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/stock-1863880.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+}
+
+header .logo {
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 150px;
+}
+
+header .navbar {
+    margin-right: 150px;
+}
+
+header .navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-icon {
+    display: none; /* Cacher l'icône hamburger par défaut */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.navbar ul.active {
+    display: block; /* Afficher le menu lorsqu'il est actif */
+}
+
+header .navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header .navbar ul li a:hover {
+    color: blueviolet;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: white;
+    margin-top: 120px;
+    margin-bottom: 0px;
+    height: 50px;
+}
+
+/* Media Queries pour la réactivité */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    header {
+        flex-direction: column; /* Empiler les éléments du header sur les petits écrans */
+        justify-content: center;
+    }
+
+    .menu-icon {
+        display: block; /* Afficher l'icône hamburger */
+    }
+
+    .logo {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .navbar {
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .navbar ul {
+        display: none; /* Cacher le menu par défaut sur les petits écrans */
+        flex-direction: column; /* Aligner les éléments verticalement */
+        width: 100%; /* Prendre toute la largeur */
+        margin-top: 10px;
+    }
+
+    .navbar ul.active {
+        display: block; /* Afficher le menu lorsque la classe 'active' est ajoutée */
+    }
+
+    .navbar ul li {
+        text-align: center; /* Centrer les liens */
+        margin: 10px 0;
+    }
+
+    .navbar ul li a {
+        font-size: 18px;
+    }
+
+    body {
+        font-size: 20px; /* Taille de police plus petite pour les écrans plus petits */
+    }
+
+    footer {
+        font-size: 10px;  /* Réduire la taille de police pour les petits écrans */
+        padding: 10px;
+    }
+}

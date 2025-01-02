@@ -16,3 +16,23 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+document.querySelectorAll('.toggle-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const details = button.parentElement.nextElementSibling;
+        // Toggle l'affichage des détails sans changer le texte du bouton
+        if (details.style.display === "none" || details.style.display === "") {
+            details.style.display = "block";
+        } else {
+            details.style.display = "none";
+        }
+    });
+});
+
+const menuIcon = document.querySelector('.menu-icon');
+const navbar = document.querySelector('.navbar ul');
+
+menuIcon.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+});
+
