@@ -80,6 +80,7 @@ header .navbar ul li a:hover {
     align-items: center;
     justify-content: space-between;
     margin-top: 0px;
+    margin-left: -200px;
     color: #fff;
     font-family: 'Audiowide', sans-serif;
     gap: 20px;
@@ -124,7 +125,7 @@ header .navbar ul li a:hover {
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-right: -230px;
+    margin-right: -340px;
     margin-top: 100px;
 }
 
@@ -178,6 +179,7 @@ header .navbar ul li a:hover {
     justify-content: left;
     gap: 20px; /* Espacement entre les éléments */
     margin-top: -50px;
+    margin-left: -200px;
 }
 
 /* Style pour le bouton de téléchargement du CV */
@@ -212,18 +214,21 @@ header .navbar ul li a:hover {
 /* Key Metrics Section */
 section#metrics {
     margin-top: 100px;
+    margin-left: -200px;
 }
 
 #metrics h2 {
     font-size: 36px;
     font-weight: bold;
     color: whitesmoke;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .metrics-container {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    margin-left: 200px;
 }
 
 .metric {
