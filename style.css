@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/stock-1863880.jpg');
@@ -64,9 +63,9 @@ header .navbar ul li a:hover {
 
 /* HOME PAGE */
 .container {
-    width: 80%;
-    margin-left: 150px;
-    margin-right: 150px;
+    width: 100%;  /* Utiliser 100% pour la largeur */
+    max-width: 1200px;  /* Limiter la largeur maximale */
+    margin: 0 auto;  /* Centrer le contenu */
 }
 
 /* Sections */
@@ -118,7 +117,6 @@ header .navbar ul li a:hover {
     font-weight: lighter;
 }
 
-
 /* Photo et bordure rotative */
 .photo-container {
     flex: 1;
@@ -132,8 +130,9 @@ header .navbar ul li a:hover {
 
 /* Image fixe */
 .profile-photo {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    max-width: 300px;  /* Garder la taille maximale sur grand écran */
+    height: auto;
     border-radius: 50%;
     object-fit: cover; /* Adapte l'image au cadre circulaire */
     z-index: 2; /* Place l'image au-dessus */
@@ -161,7 +160,6 @@ header .navbar ul li a:hover {
     border-color: blueviolet;
     animation: rotate-border 240s linear infinite;
 }
-
 
 /* Animation de rotation */
 @keyframes rotate-border {
@@ -215,6 +213,7 @@ header .navbar ul li a:hover {
 section#metrics {
     margin-top: 100px;
 }
+
 #metrics h2 {
     font-size: 36px;
     font-weight: bold;
@@ -245,9 +244,82 @@ section#metrics {
 footer {
     text-align: center;
     padding: 20px;
-    font-size: 10px;
+    font-size: 12px;
     color: white;
     margin-top: 120px;
     margin-bottom: 0px;
     height: 50px;
+}
+
+/* Media Queries pour la réactivité */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    header {
+        flex-direction: column; /* Empiler les éléments du header sur les petits écrans */
+        justify-content: center;
+    }
+
+    .logo {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .navbar {
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .navbar ul {
+        flex-direction: column;  /* Empiler les éléments de la navbar */
+    }
+
+    #presentation {
+        flex-direction: column;  /* Empiler les sections à gauche et à droite */
+        text-align: center;
+    }
+
+    .photo-container {
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+    }
+
+    body {
+        font-size: 20px; /* Taille de police plus petite pour les écrans plus petits */
+    }
+
+    .hello {
+        font-size: 30px;
+    }
+
+    .name {
+        font-size: 30px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .download-btn {
+        padding: 8px 16px;
+        font-size: 14px; /* Plus petit sur les petits écrans */
+    }
+
+    .cta-buttons i {
+        font-size: 24px;
+    }
+
+    footer {
+        font-size: 10px;  /* Réduire la taille de police pour les petits écrans */
+        padding: 10px;
+    }
 }
