@@ -67,7 +67,7 @@ nav a {
     color: whitesmoke;
     cursor: pointer;
     text-decoration: none;
-    transition: color 1000ms ease, background-color 1000ms ease, transform 300ms ease; /* Définir spécifiquement les transitions */
+    transition: ease-in-out 0.3s; /* Définir spécifiquement les transitions */
 }
 
 /* Effet au survol */
@@ -84,7 +84,7 @@ nav a.active {
     background-color: blueviolet;
     padding: 10px 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: background-color 1000ms ease, color 1000ms ease, box-shadow 1000ms ease, transform 300ms ease; /* Transition sur toutes les propriétés */
+    transform: scale(1.1); /* Légère augmentation de taille */
 }
 
 /* Effet au survol d'un lien actif */
@@ -101,6 +101,8 @@ nav a.active:hover {
     top: 35px;
     width: 30px;
 }
+
+/* Home */
 
 .content {
     padding-top: 50px;
@@ -391,3 +393,104 @@ footer {
         display: block;
     }
 }
+
+/* Services */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 100px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-row {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 100px;
+    margin-bottom: 316px;
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-name {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    transition: ease-in-out 0.3s;
+}
+
+.service-name.active {
+    color: blueviolet; /* Couleur active pour le nom du service */
+    transform: scale(1.1); /* Optionnel : Agrandir légèrement le texte */
+}
+
+
+.toggle-btn {
+    display: inline-block;
+    cursor: pointer;
+    color: blueviolet;
+    border: 2px solid blueviolet;
+    border-radius: 50px;
+    background-color: transparent;
+    font-size: 30px;
+    padding: 5px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: blueviolet;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle-btn.active {
+    background-color: blueviolet;
+    color: white;
+    transform: scale(1.1); /* Agrandir légèrement le bouton */
+}
+
+.toggle-btn.active:hover {
+    background-color: rebeccapurple; /* Couleur plus sombre au survol */
+    border: 2px solid rebeccapurple;
+    transform: scale(1.1);
+}
+
+.service-details {
+    max-height: 0; /* Masquer les détails par défaut */
+    overflow: hidden; /* Cacher le contenu débordant */
+    transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out; /* Animation fluide */
+    padding-top: 2rem;
+    padding-right: 5rem;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.service-details p {
+    font-weight: lighter;
+}
+
+.service.active .service-details {
+    max-height: 500px; /* Valeur maximum pour afficher tous les détails */
+}
+
+@media  (max-width: 768px) {
+    .services {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
+
+/* Portfolio */
+
