@@ -2,71 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Franck Portfolio</title>
-    <!-- Lien vers Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide" rel="stylesheet">
-    <link rel="stylesheet" href="global_style.css">
-    <link rel="stylesheet" href="home_style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="home">
-    <!-- Header and Navigation -->
-    <header>
-        <div class="logo">FranckKD.</div>
-        <div class="navbar">
-            <div id="menu-toggle" class="menu-icon">
-                <i class="fa fa-bars"></i> <!-- Icône du menu hamburger -->
+<body >
+    <div class="main">
+        <nav>
+            <div class="logo">Franck<span>KD.</span></div>
+            <div class="nav-links">
+                <ul >
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="resume.html" class="nav-link">Resume</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
             </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <div class="container">
-
-        <!-- Presentation Section -->
-        <section id="presentation" class="section">
+            <img src="assets/menu-btn.png" alt="menu hamburger" class="menu-hamburger">
+        </nav>
+        <div class="content">
             <div class="text-content">
-                <h1 class="title">Statistician / Data Analyst</h1>
-                <p class="hello">Hello, I'm</p>
+                <h3 class="title">Statistician / Data Analyst</h3>
+                <p class="hello">Hello I'm</p>
                 <p class="name">Franck Djidji</p>
-                <p class="description">
-                    I excel at drawing insights from complex data .<br>
-                    Explore my portfolio to learn more about my work and skills.
+                <p class="description">I excel at drawing insights from complex data and
+                    <br>I am proficient in various data related programming languages and <br>
+                    technologies.
                 </p>
-            </div>
-            <div class="photo-container">
-                <div class="rotating-border">
-                    <img src="assets/" alt="Franck Djidji" class="profile-photo">
+                <div class="social-media">
+                    <a href="assets/cv.pdf" class="download-btn" download>Download CV</a>
+                    <a href="https://github.com/FranckKD" target="_blank" class="social-icon">
+                        <i class="fa-brands fa-github"></i> 
+                    </a>
+                    <a href="https://www.linkedin.com/in/franck-emmanuel-djidji-kadjo-1a4601156" target="_blank" class="social-icon">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
                 </div>
             </div>
-            
-        </section>
-
-        <!-- Social media Section -->
-        <section id="social-media" class="section">
-            <div class="cta-buttons">
-                <!-- Bouton de téléchargement du CV -->
-                <a href="assets/cv.pdf" class="btn download-btn" download>Download CV</a>
-                <a href="https://github.com/FranckKD" target="_blank" class="social-icon">
-                    <i class="fa-brands fa-github"></i> 
-                </a>
-                <a href="https://www.linkedin.com/in/franck-emmanuel-djidji-kadjo-1a4601156" target="_blank" class="social-icon">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-            </div>    
-        </section>
-        
-        <!-- Key Metrics Section -->
-        <section id="metrics" class="section">
+            <div class="profile-photo">
+                <div class="rotating-border">
+                    <!-- Ajoutez ici le chemin correct de l'image dans src -->
+                    <img src="assets/franck-djidji.jpg" alt="Franck Djidji" class="photo">
+                </div>
+            </div>
+        </div>
+        <div class="metrics">
             <h2>Key Metrics</h2>
             <div class="metrics-container">
                 <div class="metric">
@@ -75,23 +59,18 @@
                 </div>
                 <div class="metric">
                     <h3>8</h3>
-                    <p>Technologies Used</p>
+                    <p>Technologies Mastered</p>
                 </div>
                 <div class="metric">
                     <h3>3</h3>
                     <p>Projects Completed</p>
                 </div>
             </div>
-        </section>
-
+        </div>
     </div>
-
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Franck Portfolio. All Rights Reserved.</p>
     </footer>
-
-    <!-- Link to JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
