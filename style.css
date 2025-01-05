@@ -289,7 +289,7 @@ footer {
     height: 50px;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .menu-hamburger {
         display: block;
     }
@@ -329,18 +329,37 @@ footer {
         margin: 10px 0;
     }
     .content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .text-content {
-        font-size: 1.2rem;
+        max-width: 50%;
+        display: flex;
+        flex-direction: column;
     }
 
-    .text-content, .profile-photo {
-        flex: 0 0 100%;
-        margin-bottom: 20px;
+    .text-content .title {
+        font-size: 1.4em;
+    }
+
+    .text-content .description {
+        font-size: 1em;
+        font-weight: lighter;
+        text-align: left;
+    }
+
+    .text-content .hello {
+        font-size: 2em;
+    }
+
+    .text-content .name {
+        font-size: 2em;
+    }
+
+    .metrics {
+        margin-top: 0px;
     }
 
     .metrics-container {
@@ -357,30 +376,81 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 90px;
+        margin-left: -50px;
+    }
+
+    .text-content {
+        display: flex;
+        flex-direction: column;
+    }
+
     .text-content .title {
-        font-size: 1.5em;
+        font-size: .9em;
     }
 
     .text-content .description {
-        font-size: 1em;
+        font-size: .5em;
     }
 
-    .social-media a {
+    .text-content .hello {
+        font-size: 1.5em;
+        word-spacing: 2px;
+    }
+
+    .text-content .name {    
         font-size: 1.5em;
     }
 
+    .download-btn {
+        display: flex;
+        color: blueviolet;
+        padding: 5px 20px;
+        font-size: .5em;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+    .social-media i {
+        font-size: 1em; /* Taille de l'icône */
+    }
+
     .photo {
-        width: 100px;
+        width: 120px;
+    }
+
+    .metrics {
+        margin-top: 0px;
+        flex-direction: column;
+    }
+
+    .metrics h2 {
+        font-size: 1.3em;
+        margin-left: -40px;
     }
 
     .metrics-container {
-        flex-direction: column;
-        padding: 10px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .metric {
+        gap: 50px;;
     }
 
     .metric h3 {
-        font-size: 1.2em;
+        font-size: 1em;
+    }
+
+    .metric p {
+        font-size: .8em;
     }
 }
 
@@ -488,8 +558,33 @@ footer {
 @media  (max-width: 768px) {
     .services {
         grid-template-columns: repeat(1, 1fr);
+        margin-top: 50px;
     }
     
+    .service-row {
+        margin-top: 0px;
+        margin-bottom: 50px;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-name {
+        font-size: 1rem;
+    }
+
+    .toggle-btn {
+        font-size: 1rem;
+    }
+
+    .service-details {
+        margin-top: -30px;
+    }
+
+    .service-details p {
+        font-size: 0.7rem;
+        text-align: left;
+    }
 }
 
 /* Portfolio */
