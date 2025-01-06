@@ -29,6 +29,18 @@ document.querySelectorAll('.toggle-btn').forEach(button => {
     });
 });
 
+document.getElementById('service-select').addEventListener('change', function() {
+    const select = this;
+    if (select.value !== "") {
+        // Si une option est sélectionnée, on applique le texte blanc
+        select.style.color = 'white';
+    } else {
+        // Si l'utilisateur choisit "Select a service", on remet les couleurs par défaut
+        select.style.color = '#6c6c6c';
+        select.style.backgroundColor = 'black';
+    }
+});
+
 
 const menuHamburger = document.querySelector(".menu-hamburger")
 const menuLinks = document.querySelector(".nav-links")

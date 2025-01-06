@@ -470,9 +470,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 100px;
-    padding-bottom: 25px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 40px;
     justify-content: space-between;
     position: relative;
     align-items: center;
@@ -589,3 +587,178 @@ footer {
 
 /* Portfolio */
 
+
+/* Contact */
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.contact-box {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.contact-info {
+    flex: 1;
+    padding: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.contact-item .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(138, 43, 226, 0.2);
+    backdrop-filter: blur(15px);
+    color: #8a2be2;
+    font-size: 24px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.contact-item .contact-text {
+    text-align: left;
+}
+
+.contact-item .contact-text h3 {
+    margin: 0;
+    font-size: 14px;
+    color: blueviolet;
+    text-transform: uppercase;
+}
+
+.contact-item .contact-text p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.contact-form {
+    flex: 1;
+    padding: 40px;
+    background: rgba(138, 43, 226, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    color: blueviolet;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact-form .input-box {
+    margin-bottom: 20px;
+}
+
+.contact-form .input-box input,
+.contact-form .input-box textarea {
+    width: 100%;
+    border: 1px solid black;
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease;
+    color: whitesmoke;
+}
+
+.contact-form .input-box input:focus,
+.contact-form .input-box textarea:focus {
+    border-color: #8a2be2;
+    box-shadow: 0 0 5px rgba(138, 43, 226, 0.5);
+}
+
+.contact-form .input-box textarea {
+    resize: none;
+    height: 120px;
+}
+
+.contact-form .input-box input[type="submit"] {
+    background: #8a2be2;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.contact-form .input-box input[type="submit"]:hover {
+    background: #6a1bb7;
+    transform: scale(1.1);
+}
+
+.contact-form .input-box select {
+    width: 100%;
+    border: 1px solid black;
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease;
+    color: gray;
+}
+
+.contact-form .input-box select:focus {
+    border-color: #8a2be2; /* Change la couleur de la bordure au focus */
+    box-shadow: 0 0 5px rgba(138, 43, 226, 0.5); /* Effet de surbrillance */
+    color: whitesmoke;
+}
+
+.contact-form .input-box select option {
+    color: whitesmoke; /* Texte des options */
+    background: black; /* Fond des options */
+    backdrop-filter: blur(15px);
+    border: 1px solid black;
+    border-radius: 10%;
+    transition: 0.3s ease;
+    padding: 10px; /* Espacement interne */
+}
+
+select option:checked {
+    color: white; /* Couleur blanche pour le texte sélectionné */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .contact-box {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form {
+        flex: none;
+        width: 100%;
+    }
+
+    .contact-info {
+        border-right: none;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .contact-form {
+        border-radius: 0 0 15px 15px;
+    }
+}
