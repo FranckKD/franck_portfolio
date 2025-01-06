@@ -14,7 +14,7 @@ html {
 
 body {
     color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/stock-1863880.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/stock-1863880.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -216,7 +216,7 @@ nav a.active:hover {
     position: absolute;
     width: 100%;
     height: 100%;
-    border: .2rem dashed blueviolet;
+    border: .1rem dashed blueviolet;
     border-radius: 50%;
     animation: rotate-border 250s linear infinite;
 }
@@ -289,7 +289,7 @@ footer {
     height: 50px;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .menu-hamburger {
         display: block;
     }
@@ -376,7 +376,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
 
     .content {
         display: flex;
@@ -653,6 +653,18 @@ footer {
     background: rgba(138, 43, 226, 0.2);
     backdrop-filter: blur(15px);
     border-radius: 15px;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .contact-form h2 {
@@ -687,6 +699,13 @@ footer {
     box-shadow: 0 0 5px rgba(138, 43, 226, 0.5);
 }
 
+.contact-form .input-box input:valid,
+.contact-form .input-box textarea:valid,
+.contact-form .input-box select:valid {
+    border-color: #00ff00;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
 .contact-form .input-box textarea {
     resize: none;
     height: 120px;
@@ -709,6 +728,11 @@ footer {
     transform: scale(1.1);
 }
 
+.contact-form .input-box input[type="submit"]:active {
+    transform: scale(0.95);
+    background: #5a0f91;
+}
+
 .contact-form .input-box select {
     width: 100%;
     border: 1px solid black;
@@ -722,23 +746,40 @@ footer {
 }
 
 .contact-form .input-box select:focus {
-    border-color: #8a2be2; /* Change la couleur de la bordure au focus */
-    box-shadow: 0 0 5px rgba(138, 43, 226, 0.5); /* Effet de surbrillance */
+    border-color: #8a2be2;
+    box-shadow: 0 0 5px rgba(138, 43, 226, 0.5);
     color: whitesmoke;
 }
 
+.contact-form .input-box select option[value=""] {
+    color: gray;
+}
+
 .contact-form .input-box select option {
-    color: whitesmoke; /* Texte des options */
-    background: black; /* Fond des options */
-    backdrop-filter: blur(15px);
+    color: whitesmoke;
+    background: black;
     border: 1px solid black;
     border-radius: 10%;
     transition: 0.3s ease;
-    padding: 10px; /* Espacement interne */
+    padding: 10px;
 }
 
-select option:checked {
-    color: white; /* Couleur blanche pour le texte sélectionné */
+input.parsley-error, 
+textarea.parsley-error, 
+select.parsley-error {
+    border-color: red;
+}
+
+ul.parsley-errors-list {
+    list-style: none;
+    color: red;
+    font-size: 12px;
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+
+ul.parsley-errors-list li {
+    margin: 0;
 }
 
 /* Responsive design */
@@ -749,13 +790,33 @@ select option:checked {
 
     .contact-info,
     .contact-form {
-        flex: none;
-        width: 100%;
+        flex: content;
     }
 
     .contact-info {
-        border-right: none;
         border-radius: 15px 15px 0 0;
+    }
+
+    .contact-info .contact-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info .contact-item .icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .contact-info .contact-item .contact-text {
+        text-align: center;
+    }
+
+    .contact-info .contact-item .contact-text h3 {
+        font-size: 12px;
+    }
+
+    .contact-info .contact-item .contact-text p {
+        font-size: 14px;
     }
 
     .contact-form {

@@ -7,6 +7,12 @@ navLinks.forEach(link => {
   }
 });
 
+const menuHamburger = document.querySelector(".menu-hamburger")
+const menuLinks = document.querySelector(".nav-links")
+menuHamburger.addEventListener('click',()=>{
+    menuLinks.classList.toggle('mobile-menu')
+        });
+
 document.querySelectorAll('.toggle-btn').forEach(button => {
     button.addEventListener('click', function () {
         // Ajouter ou retirer la classe active pour changer le style du bouton
@@ -41,9 +47,40 @@ document.getElementById('service-select').addEventListener('change', function() 
     }
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    emailjs.init("0UHeMHIbxWrHWsMmw"); // Remplacez par votre user_id
 
-const menuHamburger = document.querySelector(".menu-hamburger")
-const menuLinks = document.querySelector(".nav-links")
-menuHamburger.addEventListener('click',()=>{
-    menuLinks.classList.toggle('mobile-menu')
-        });       
+    $(document).ready(function () {
+        // Lorsque le formulaire est soumis
+        $('#contact-form').on('submit', function (event) {
+            event.preventDefault(); // Empêcher le comportement de soumission par défaut du formulaire
+
+            // Valider le formulaire avec Parsley.js
+            if ($(this).parsley().isValid()) {
+                // Collecter les données du formulaire
+                const formData = new FormData(this);
+
+                // Créer un objet templateParams avec les données récupérées
+                const templateParams = {
+                    firstname: formData.get('firstname'),
+                    lastname: formData.get('lastname'),
+                    email: formData.get('email'),
+                    message: formData.get('message'),
+                    service: formData.get('service')
+                };
+
+                // Vérifier les données collectées
+                console.log("Template Params: ", templateParams);
+
+                // Envoyer le message via EmailJS
+                emailjs.send('service_hssqegk', 'template_dfa357n', templateParams)
+                    .then(function(response) {
+                        alert('Votre message a été envoyé avec succès!');
+                        document.getElementById('contact-form').reset(); // Réinitialiser le formulaire
+                    }, function(error) {
+                        alert('Une erreur est survenue : ' + error.text);
+                    });
+            }
+        });
+    });
+});
