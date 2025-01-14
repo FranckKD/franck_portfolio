@@ -823,3 +823,165 @@ ul.parsley-errors-list li {
         border-radius: 0 0 15px 15px;
     }
 }
+
+/* RESUME*/
+
+.container {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding-left: 50px;
+}
+
+h1 {
+    color: whitesmoke;
+    font-weight: bold;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    font-size: 3rem;
+}
+  
+.titles {
+    width: 30%;
+    padding: 20px;
+    overflow-y: auto;
+}
+.details {
+    width: 50%;
+    padding: 20px;
+}
+  
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.titles button {
+    display: inline-block;
+    width: 100%;
+    padding: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+    background: rgba(198, 197, 197, 0.2);
+    backdrop-filter: blur(15px);
+    color: whitesmoke;
+    margin-bottom: 10px;
+    border-radius: 5%;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.titles button.active {
+    background-color: blueviolet;
+    color: #fff;
+}
+  
+.titles button:hover {
+    background-color: blueviolet;
+    color: whitesmoke;
+}
+  
+.details {
+    width: 70%;
+    padding: 20px;
+}
+
+.details .section {
+    display: none; /* Caché par défaut */
+}
+  
+.details .section.active {
+    display: block; /* Visible uniquement si actif */
+}
+
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: whitesmoke;
+}
+  
+.experience-items {
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    overflow-y: auto;
+}
+  
+.experience-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(150, 150, 150, 0.2);
+}
+  
+.experience-item h6 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 8px;
+    color: blueviolet;
+}
+  
+.experience-item h5 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+  
+.experience-item p {
+    font-size: 16px;
+    margin-bottom: 8px;
+    align-items: center;
+    justify-content: center;
+    color: rgba(200, 200, 200, 1);
+}
+  
+/* Bullet point customisation */
+.bullet-point {
+    font-size: 22px; /* Taille du bullet point */
+    color: blueviolet;  /* Couleur personnalisée */
+    margin-right: 10px; /* Espacement entre le bullet point et le texte */
+}
+
+.education-items {
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    overflow-y: auto;
+}
+  
+.education-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(150, 150, 150, 0.2);
+}
+  
+.education-item h6 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 8px;
+    color: blueviolet;
+}
+  
+.education-item h5 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+  
+.education-item p {
+    font-size: 16px;
+    margin-bottom: 8px;
+    align-items: center;
+    justify-content: center;
+    color: rgba(200, 200, 200, 1);
+}
