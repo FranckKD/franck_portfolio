@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     list-style: none;
     outline: none;
     border: none;
@@ -20,6 +19,7 @@ body {
     background-position: center;
     display: flex;
     flex-direction: column;
+    height: auto;
 }
 
 
@@ -285,8 +285,7 @@ footer {
     font-size: 12px;
     color: white;
     margin-top: 10px;
-    margin-bottom: 0px;
-    height: 50px;
+    height: 100%;
 }
 
 @media (max-width: 768px) {
@@ -908,35 +907,54 @@ h2 {
     margin-bottom: 20px;
     color: whitesmoke;
 }
-  
-.experience-items {
-    padding-top: 70px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+
+#grid {
     overflow-y: auto;
+    max-height: calc(100vh - 310px);
+    max-width: 100%;
+    overflow-x:auto;
+}
+
+#grid::-webkit-scrollbar {
+    width: 8px;
 }
   
-.experience-item {
+#grid::-webkit-scrollbar-thumb {
+    background-color: blueviolet;;
+    border-radius: 5px;
+}
+
+.experience-grid,
+.education-grid {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+  
+.experience-item, .education-item {
     margin-bottom: 20px;
     padding: 15px;
     border-radius: 8px;
     background-color: rgba(150, 150, 150, 0.2);
 }
   
-.experience-item h6 {
+.experience-item h6,
+.education-item h6 {
     font-size: 16px;
     font-weight: normal;
     margin-bottom: 8px;
     color: blueviolet;
 }
   
-.experience-item h5 {
+.experience-item h5,
+.education-item h5 {
     font-size: 18px;
     margin-bottom: 8px;
 }
   
-.experience-item p {
+.experience-item p,
+.education-item p {
     font-size: 16px;
     margin-bottom: 8px;
     align-items: center;
@@ -951,37 +969,108 @@ h2 {
     margin-right: 10px; /* Espacement entre le bullet point et le texte */
 }
 
-.education-items {
-    padding-top: 70px;
+.skills-grid {
+    width: 70%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    overflow-y: auto;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    row-gap: 20px;
+    column-gap: 0px;
 }
   
-.education-item {
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: rgba(150, 150, 150, 0.2);
-}
-  
-.education-item h6 {
-    font-size: 16px;
-    font-weight: normal;
-    margin-bottom: 8px;
-    color: blueviolet;
-}
-  
-.education-item h5 {
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-  
-.education-item p {
-    font-size: 16px;
-    margin-bottom: 8px;
+.skill-item {
+    display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(200, 200, 200, 1);
+    width: 150px; /* Taille du carré */
+    height: 150px; /* Taille du carré */
+    border-radius: 8px;
+    background-color: rgba(150, 150, 150, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+  
+.skill-item i {
+    font-size: 60px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+  
+.skill-item:hover i {
+    color: blueviolet; /* Couleur de l'icône au survol */
+}
+
+.skill-item span {
+    position: absolute;
+    top: -30px;  /* Positionne le texte au-dessus de l'icône */
+    font-size: 14px;
+    color: #333;
+    opacity: 0;  /* Cache le texte par défaut */
+    transition: opacity 0.3s ease-in-out;
+}
+  
+.skill-item:hover span {
+    opacity: 1;  /* Affiche le texte lors du survol */
+}
+
+.aboutme-grid {
+    padding-top: 60px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    row-gap: 60px;
+    column-gap: 60px;
+}
+
+.aboutme-grid p {
+    font-size: 1.1rem;
+}
+
+.aboutme-grid strong {
+    margin-right: 20px;
+    font-size: 1rem;
+    color: rgb(158, 156, 156);
+}
+
+@media (max-width: 768px) {
+    h1 {
+      font-size: 28px;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .skill-item i {
+      font-size: 30px;
+    }
+  
+    .aboutme-grid p {
+      font-size: 14px;
+    }
+}
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 24px;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  
+    .skill-item {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .aboutme-grid p {
+      font-size: 12px;
+    }
 }
